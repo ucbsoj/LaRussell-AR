@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/aframe-v1.4.2.min.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+    <script src="js/mindar-image-aframe.prod.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <title>You&#x27;re in Good Compenny</title>
+  </head>
+  <body>
+    
+    
+    <a-scene mindar-image="imageTargetSrc:targets/targets.mind;filterMinCF:0.5;filterBeta:100;autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+      <a-assets>
+        <img id="play-circle" src="play-circle.png" alt="play circle">
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+      
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-video src="#play-circle" data-src="bgiggz.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-video src="#play-circle" data-src="chalbeto.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-video src="#play-circle" data-src="chow.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-video src="#play-circle" data-src="dom.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-video src="#play-circle" data-src="jason.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      <a-entity mindar-image-target="targetIndex: 5">
+        <a-video src="#play-circle" data-src="jayla.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity> 
+      
+      <a-entity mindar-image-target="targetIndex: 6">
+        <a-video src="#play-circle" data-src="kujo.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 7">
+        <a-video src="#play-circle" data-src="larussell.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      <a-entity mindar-image-target="targetIndex: 8">
+        <a-video src="#play-circle" data-src="milli.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity> 
+      
+      <a-entity mindar-image-target="targetIndex: 9">
+        <a-video src="#play-circle" data-src="moms.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      
+      <a-entity mindar-image-target="targetIndex: 10">
+        <a-video src="#play-circle" data-src="pops.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity> 
+      
+      
+      <a-entity mindar-image-target="targetIndex: 11">
+        <a-video src="#play-circle" data-src="rainbow.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity> 
+      
+      <a-entity mindar-image-target="targetIndex: 12">
+        <a-video src="#play-circle" data-src="ricki.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      
+      <a-entity mindar-image-target="targetIndex: 13">
+        <a-video src="#play-circle" data-src="simon.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+
+      <a-entity mindar-image-target="targetIndex: 14">
+        <a-video src="#play-circle" data-src="sondra.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+      
+      <a-entity mindar-image-target="targetIndex: 15">
+        <a-video src="#play-circle" data-src="swaggyb.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity> 
+      
+      <a-entity mindar-image-target="targetIndex: 16">
+        <a-video src="#play-circle" data-src="tietta.mp4" class="clickable" width="1" height="0.7742" position="0 0 0"></a-video>
+      </a-entity>
+
+    </a-scene>
+    <script>
+      //add new property for HTMLMediaElement to see if videos are playing
+      Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+          get: function(){return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);}
+      });
+      
+      jQuery(document).ready(function($){
+        
+       
+        var   videoID     = "";
+        
+        //HS01-replacement/HS01-replacement.m3u8
+        
+        
+        
+        $("a-video").on("click", function(e){
+          console.log($(this).data("src"));
+
+          if($("a-video[data-src='" + videoID + "']").length !== 0 && $("a-video[data-src='" + videoID + "']").attr("src") != "#" + replaceChars(videoID)){
+            $("a-video[data-src='" + videoID + "']").attr("src", "#" + replaceChars(videoID));
+            $("a-video").not("a-video[data-src='" + videoID + "']").attr("src", "#play-circle");
+            $("a-assets video").not("#" + replaceChars(videoID)).remove();
+            $("#" + replaceChars(videoID)).get(0).play();
+          }
+            
+        });
+        
+        
+        $("a-entity").on("targetFound", function(e){
+          
+         
+          
+          if(!$(this).has("a-video").length){
+            return;
+          }
+          
+           console.log($("a-video", this).data("src"))
+          
+          //get the url to the video from data-src attribute
+          let id = $("a-video", this).data("src");
+
+          
+          
+          if(id !== videoID && $("#" + replaceChars(id)).length === 0){
+            videoID = id;
+            
+            let videoHolder = $("<video />");
+            let source      = $("<source />")
+            
+            source.attr("src", "replacements/" + id);
+            source.attr("type", "video/mp4");
+            
+            videoHolder.html(source);
+            videoHolder.attr("id", replaceChars(videoID));
+            videoHolder.attr("webkit-playsinline", true);
+            videoHolder.attr("playsinline", true);
+            
+            
+            $("a-assets").append(videoHolder);
+            
+            videoHolder.get(0).pause();
+            
+          } else if($("#" + replaceChars(id)).length != 0){
+            if($("#" + replaceChars(id)).get(0).readyState == 4 && $("#" + replaceChars(id)).get(0).currentTime > 0){
+              $("#" + replaceChars(id)).get(0).play();
+            }
+          }
+             
+          
+
+        });
+        
+        
+        $("a-entity").on("targetLost", function(e){
+          
+          if(!$(this).has("a-video").length){
+            return;
+          }
+          
+          let id = $("a-video", this).data("src");
+          
+          $("a-assets video").each(function(i,e){
+            $(this).get(0).pause();
+          });
+
+        });
+        
+        function replaceChars(text){
+          return text.replace(/\//g, "-").replace(/\.mp4/g, "");
+        }
+
+      });
+    </script>
+  </body>
+</html>
