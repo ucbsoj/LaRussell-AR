@@ -3,6 +3,23 @@ LaRussell Project AR
 
 By Kayla Henderson-Wood
 
+Demo: [https://ucbsoj.github.io/LaRussell-AR](https://ucbsoj.github.io/LaRussell-AR)
+
+Or scan code below with your phone and point at images further down.
+
+<img src="qrcode.png?raw=true" width="150" height="150" alt="QR code">
+
+
+**Example images:**
+
+
+<img src="targets/bgiggz.png?raw=true" width="310" height="240" alt="Bgiggz">
+
+<img src="targets/chalberto.png?raw=true" width="310" height="240" alt="Chalberto">
+
+<img src="targets/dom.png?raw=true" width="310" height="240" alt="Dom">
+
+<img src="targets/jason.png?raw=true" width="310" height="240" alt="Jason">
 
 
 
